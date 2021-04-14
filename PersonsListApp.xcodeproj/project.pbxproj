@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		C1C27FEB2625C96D00EAAEB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C27FEA2625C96D00EAAEB2 /* AppDelegate.swift */; };
 		C1C27FED2625C96D00EAAEB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C27FEC2625C96D00EAAEB2 /* SceneDelegate.swift */; };
-		C1C27FEF2625C96D00EAAEB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C27FEE2625C96D00EAAEB2 /* ViewController.swift */; };
+		C1C27FEF2625C96D00EAAEB2 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C27FEE2625C96D00EAAEB2 /* PersonListViewController.swift */; };
 		C1C27FF22625C96D00EAAEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C27FF02625C96D00EAAEB2 /* Main.storyboard */; };
 		C1C27FF42625C97100EAAEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C27FF32625C97100EAAEB2 /* Assets.xcassets */; };
 		C1C27FF72625C97100EAAEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C27FF52625C97100EAAEB2 /* LaunchScreen.storyboard */; };
+		C1C280012625EA8800EAAEB2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C280002625EA8800EAAEB2 /* Person.swift */; };
+		C1C280042625EBED00EAAEB2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C280032625EBED00EAAEB2 /* DataManager.swift */; };
+		C1EEAF0D26261A2D00EE475E /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEAF0C26261A2D00EE475E /* PersonDetailsViewController.swift */; };
+		C1EEAF142626D65E00EE475E /* DetailsPersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEAF132626D65E00EE475E /* DetailsPersonsListViewController.swift */; };
+		C1EEAF192627339700EE475E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEAF182627339700EE475E /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C1C27FE72625C96C00EAAEB2 /* PersonsListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C27FEA2625C96D00EAAEB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1C27FEC2625C96D00EAAEB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C1C27FEE2625C96D00EAAEB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1C27FEE2625C96D00EAAEB2 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		C1C27FF12625C96D00EAAEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1C27FF32625C97100EAAEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1C27FF62625C97100EAAEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1C27FF82625C97100EAAEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1C280002625EA8800EAAEB2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C1C280032625EBED00EAAEB2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C1EEAF0C26261A2D00EE475E /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		C1EEAF132626D65E00EE475E /* DetailsPersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPersonsListViewController.swift; sourceTree = "<group>"; };
+		C1EEAF182627339700EE475E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +68,12 @@
 			children = (
 				C1C27FEA2625C96D00EAAEB2 /* AppDelegate.swift */,
 				C1C27FEC2625C96D00EAAEB2 /* SceneDelegate.swift */,
-				C1C27FEE2625C96D00EAAEB2 /* ViewController.swift */,
+				C1C280002625EA8800EAAEB2 /* Person.swift */,
+				C1C280032625EBED00EAAEB2 /* DataManager.swift */,
+				C1EEAF0C26261A2D00EE475E /* PersonDetailsViewController.swift */,
+				C1EEAF182627339700EE475E /* TabBarViewController.swift */,
+				C1C27FEE2625C96D00EAAEB2 /* PersonListViewController.swift */,
+				C1EEAF132626D65E00EE475E /* DetailsPersonsListViewController.swift */,
 				C1C27FF02625C96D00EAAEB2 /* Main.storyboard */,
 				C1C27FF32625C97100EAAEB2 /* Assets.xcassets */,
 				C1C27FF52625C97100EAAEB2 /* LaunchScreen.storyboard */,
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1C27FEF2625C96D00EAAEB2 /* ViewController.swift in Sources */,
+				C1EEAF192627339700EE475E /* TabBarViewController.swift in Sources */,
+				C1EEAF142626D65E00EE475E /* DetailsPersonsListViewController.swift in Sources */,
+				C1C27FEF2625C96D00EAAEB2 /* PersonListViewController.swift in Sources */,
+				C1C280042625EBED00EAAEB2 /* DataManager.swift in Sources */,
+				C1EEAF0D26261A2D00EE475E /* PersonDetailsViewController.swift in Sources */,
 				C1C27FEB2625C96D00EAAEB2 /* AppDelegate.swift in Sources */,
+				C1C280012625EA8800EAAEB2 /* Person.swift in Sources */,
 				C1C27FED2625C96D00EAAEB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

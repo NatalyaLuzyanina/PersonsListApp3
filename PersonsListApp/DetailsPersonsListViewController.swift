@@ -7,57 +7,43 @@
 
 import UIKit
 
-//protocol PersonListViewControllerDelegate {
-//    func setPersonsList(_ persons: [Person])
-//}
-protocol PassPersonsData {
-    func passData(_ persons: [Person])
-}
 class DetailsPersonsListViewController: UITableViewController {
 
     var personsData: [Person]!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let tabbar = tabBarController as! TabBarViewController
+       personsData = tabbar.personsList
     }
 
     // MARK: - Table view data source
-
+   
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return personsData.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 2 //personsData[section].phone
     }
 
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailsPerson", for: indexPath)
 
-        let person = personsData[indexPath.row]
-        
+        let person = personsData[indexPath.section]
         var content = cell.defaultContentConfiguration()
-        content.text = "\(person.name) \(person.surname)"
-        //print(person.name)
-        
-        
+        content.text = indexPath.row == 0 ? "\(person.phone)" : "\(person.email)"
         cell.contentConfiguration = content
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let person = personsData[section]
+        return "\(person.name) \(person.surname)"
+    }
+
     
 
     /*
@@ -95,22 +81,6 @@ class DetailsPersonsListViewController: UITableViewController {
     }
     */
 
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabbarVC = segue.destination as? TabBarViewController else { return }
-        tabbarVC.delegate1 = self
-    }
-   
 }
-//extension DetailsPersonsListViewController: PersonListViewControllerDelegate {
-//    func setPersonsList(_ persons: [Person]) {
-//        personsList = persons
-//    }
-//}
-extension DetailsPersonsListViewController: PassPersonsData {
-    func passData(_ persons: [Person]) {
-        personsData = persons
-    }
-}
+
 

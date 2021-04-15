@@ -85,22 +85,6 @@
             </objects>
             <point key="canvasLocation" x="4297.1014492753629" y="-10.044642857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="YO1-He-4fq">
-            <objects>
-                <viewController id="I6v-v2-iOp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qbT-uC-qEb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Rya-Th-eAL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="eVv-3b-cLE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XJQ-hD-fOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8349.2753623188419" y="168.75"/>
-        </scene>
         <!--Details Persons List View Controller-->
         <scene sceneID="nnf-JE-TlB">
             <objects>

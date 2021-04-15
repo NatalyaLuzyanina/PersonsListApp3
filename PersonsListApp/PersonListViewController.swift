@@ -9,35 +9,30 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
 
-    var personData: [Person]!
+    var personList: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tabbar = tabBarController as! TabBarViewController
-       personData = tabbar.personsList
+       personList = tabbar.personsList
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let persondetailsVC = segue.destination as? PersonDetailsViewController else {return }
-        // присваиваем в indexPath индекс строки по которой тапнул пользователь
         guard let indexPath = tableView.indexPathForSelectedRow else {return }
-        // присваиваем в person элемент масссива по индексу строки по которой тапнул пользователь
-        let person = personData[indexPath.row]
+        let person = personList[indexPath.row]
         persondetailsVC.person = person
     }
     
-    // определяет колич-во строк в секции
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        personData.count
+        personList.count
     }
     
-    //метод позволяет работать с содержимым ячейки
-    // регламентирует работу с отображением содержимого ячейки
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
-        let person = personData[indexPath.row]
+        let person = personList[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
         content.text = "\(person.name) \(person.surname)"

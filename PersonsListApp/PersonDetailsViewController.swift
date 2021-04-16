@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class PersonDetailsViewController: UIViewController {
 
     @IBOutlet var phoneLabel: UILabel!

@@ -10,23 +10,32 @@ struct Person {
     let surname: String
     let phone: String
     let email: String
+    
+    // функция которая перебирает 4 массива и создает один массив элементы которого имеют тип Person
+    static func getPersonsList() -> [Person] {
+
+        var persons: [Person] = []
+        
+        //создаем массив имен, фамилий и тд и перемешиваем при помощи shuffled()
+        let names = DataManager.shared.names.shuffled()
+        let surname = DataManager.shared.surnames.shuffled()
+        let phone = DataManager.shared.phoneNumbers.shuffled()
+        let email = DataManager.shared.emails.shuffled()
+        
+        // массивы могут иметь разное кол-во элементов, нам нужно ниаменьшее чтобы цикл не вышел за пределы диапазона
+        let indexCount = min(names.count, surname.count, phone.count, email.count)
+        
+        for index in 0..<indexCount {
+            
+            let person = Person(
+                name: names[index],
+                surname: surname[index],
+                phone: phone[index],
+                email: email[index]
+            )
+            persons.append(person)
+        }
+        return persons
+    }
 }
 
-func getPersonsList() -> [Person] {
-    let personsData = DataManager()
-    var persons: [Person] = []
-    
-    for _ in personsData.names {
-        
-        guard let name = personsData.names.randomElement() else { continue }
-        guard let surname = personsData.surnames.randomElement() else { continue }
-        guard let phone = personsData.phoneNumbers.randomElement() else { continue }
-        guard let email = personsData.emails.randomElement() else { continue }
-        
-        
-        let person = Person(name: name, surname: surname, phone: phone, email: email)
-        persons.append(person)
-    }
-    
-    return persons
-}

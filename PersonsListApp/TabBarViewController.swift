@@ -21,9 +21,9 @@ class TabBarViewController: UITabBarController {
     func setupViewControllers() {
         guard let contactsVC = viewControllers?.first as? ContactsViewController else { return }
         guard let sectionsVC = viewControllers?.last as? SectionViewController else { return }
-       
+        
         contactsVC.personList = personsList
-        sectionsVC.personList = personsList
+    sectionsVC.personList = personsList
         
        //можно перебирать вьюконтроллеры с помощью цикла
 //        viewControllers?.forEach {
@@ -42,9 +42,6 @@ class TabBarViewController: UITabBarController {
 //                sectionsVC.personList = personsList
 //            }
 //        }
-        
-        
-        
         
     }
 }

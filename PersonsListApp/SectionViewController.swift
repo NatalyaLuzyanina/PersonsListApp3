@@ -17,7 +17,7 @@ class SectionViewController: UITableViewController {
     //заголовок для секции
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let person = personList[section]
-        return "\(person.name) \(person.surname)"
+        return "\(person.first_name) \(person.last_name)"
     }
     
     //кол-во секций
@@ -42,7 +42,7 @@ class SectionViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         
         //если индекс строки 0, то в нее передается телефон, иначе имейл
-        content.text = indexPath.row == 0 ? "\(person.phone)" : "\(person.email)"
+        content.text = "\(person.email)"
         cell.contentConfiguration = content
 
         return cell

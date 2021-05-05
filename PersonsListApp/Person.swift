@@ -9,8 +9,8 @@
 struct Person: Decodable {
     let id: Int?
     let email: String?
-    let first_name: String?
-    let last_name: String?
+    let firstName: String?
+    let lastName: String?
     let avatar: String?
 }
 

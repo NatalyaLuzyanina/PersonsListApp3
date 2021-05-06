@@ -18,7 +18,7 @@ class PersonDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         emailLabel.text = "Email: \(person.email ?? "")"
-        title = "\(person.firstName ?? "") \(person.lastName ?? "")"
+        title = "\(person.first_name ?? "") \(person.last_name ?? "")"
         
         if let data = try? Data(contentsOf: URL(string: person.avatar!)!) {
         imageView.image = UIImage(data: data)

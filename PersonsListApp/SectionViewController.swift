@@ -17,12 +17,12 @@ class SectionViewController: UITableViewController {
     //заголовок для секции
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let person = personList[section]
-        return "\(person.firstName ?? "") \(person.lastName ?? "")"
+        return "\(person.first_name ?? "") \(person.last_name ?? "")"
     }
     
     //кол-во секций
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return personList.count
+        return personList.count 
     }
     
     //кол-во строк в секции
